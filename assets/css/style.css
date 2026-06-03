@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "archvio";
+  src: url(../font/Archivo-Italic-VariableFont_wdth\,wght.ttf);
+  src: url(../font/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0px;
+}
