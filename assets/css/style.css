@@ -10,7 +10,36 @@
   box-sizing: border-box;
 }
 .container {
-  max-width: 1640px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0px;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 12px;
+  align-items: center;
+}
+nav {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  font-family: archvio;
+}
+header {
+  margin-top: 67px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.downloadbtn {
+  margin-left: 24px;
+  height: 52px;
+  max-width: 188px;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
 }
