@@ -60,7 +60,36 @@ window.addEventListener("scroll", (e) => {
   behavior: "smooth";
 });
 
-// const html = document.getElementById("html");
-// window.addEventListener("scroll", (e) =>{
-//   const scrollTop =
-// })
+const html = document.getElementById("html");
+window.addEventListener("scroll", (e) => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollFraction = scrollTop / docHeight;
+  const progressValue = scrollFraction * 0.89;
+  html.value = progressValue;
+});
+
+const css = document.getElementById("css");
+window.addEventListener("scroll", (e) => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollFraction = scrollTop / docHeight;
+  const progressValue = scrollFraction * 0.87;
+  css.value = progressValue;
+});
+
+const js = document.getElementById("js");
+window.addEventListener("scroll", (e) => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const scrollFraction = scrollTop / docHeight;
+  const progressValue = scrollFraction * 0.71;
+  js.value = progressValue;
+});
