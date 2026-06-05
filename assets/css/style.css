@@ -3,7 +3,9 @@
   src: url(../font/Archivo-Italic-VariableFont_wdth\,wght.ttf);
   src: url(../font/Archivo-VariableFont_wdth\,wght.ttf);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
