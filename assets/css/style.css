@@ -103,3 +103,24 @@ img.displaySlide {
   border-radius: 20px;
   border: 2px solid black;
 }
+.projectinfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonflex {
+  display: flex;
+  justify-content: center;
+  column-gap: 22px;
+  margin-top: 59px;
+  margin-bottom: 108px;
+}
+.protfolio-container img {
+  max-width: 445px;
+  height: 489px;
+}
+.protfolio-container {
+  display: flex;
+  justify-content: space-between;
+}

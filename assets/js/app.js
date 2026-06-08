@@ -93,3 +93,57 @@ window.addEventListener("scroll", (e) => {
   const progressValue = scrollFraction * 0.71;
   js.value = progressValue;
 });
+
+// My Projects
+
+const allBtn = document.getElementById("allbtn");
+const htmlBtn = document.getElementById("htmlbtn");
+const cssBtn = document.getElementById("cssbtn");
+const jsBtn = document.getElementById("jsbtn");
+const allProjects = document.getElementById("allprojects");
+const htmlProject = document.getElementById("htmlproject");
+const cssProject = document.getElementById("cssproject");
+const jsProject = document.getElementById("jsproject");
+
+// allBtn.addEventListener("click", (event) => {
+//   if (allProjects.style.display === "block") {
+//     allProjects.style.display = "none";
+//   } else {
+//     allProjects.style.display = "block";
+//   }
+// });
+
+// htmlBtn.addEventListener("click", (event) => {
+//   if (htmlProject.style.display === "block") {
+//     htmlProject.style.display = "none";
+//     cssProject.style.display = "none";
+//     jsProject.style.display = "none";
+//   } else {
+//     htmlProject.style.display = "block";
+//     cssProject.style.display = "none";
+//     jsProject.style.display = "none";
+//   }
+// });
+const filterButtons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelector(".filter-btn.active")?.classList.remove("active");
+    button.classList.add("active");
+
+    const selectedCategory = button.getAttribute("data-filter");
+
+    cards.forEach((card) => {
+      const cardCategory = card.getAttribute("data-category");
+      if (
+        selectedCategory === "all" ||
+        card.getAttribute("data-category") === selectedCategory
+      ) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
