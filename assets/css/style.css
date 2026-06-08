@@ -86,3 +86,20 @@ img.displaySlide {
 .introducing {
   max-width: 718px;
 }
+.servicedescription {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.graphiccards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.graphiccards img {
+  max-width: 330px;
+  height: 346px;
+  border-radius: 20px;
+  border: 2px solid black;
+}

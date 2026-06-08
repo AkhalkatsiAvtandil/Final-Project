@@ -55,7 +55,7 @@ window.addEventListener("scroll", (e) => {
   // timemanagment.value = "0.07";
   // behavior: "smooth";
   const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.96;
+  const progressValue = scrollFraction * 0.95;
   timemanagment.value = progressValue;
   behavior: "smooth";
 });
