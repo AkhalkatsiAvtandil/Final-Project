@@ -156,8 +156,19 @@ img.displaySlide {
   justify-content: flex-start;
 }
 .bullets {
+  display: flex;
+  justify-content: center;
+  row-gap: 9px;
+  border-radius: 8px;
+}
+.bullet {
   margin-top: 87px;
   max-width: 57px;
   height: 16px;
   background-color: rgba(217, 217, 217, 1);
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.bullet.active {
+  background: rgba(253, 111, 0, 1);
 }
