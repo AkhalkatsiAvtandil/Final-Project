@@ -67,7 +67,7 @@ window.addEventListener("scroll", (e) => {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.89;
+  const progressValue = scrollFraction * 0.9;
   html.value = progressValue;
 });
 
