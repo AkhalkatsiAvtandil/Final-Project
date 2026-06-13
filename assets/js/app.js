@@ -147,3 +147,32 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// TESTAMONIALS
+
+// const testimonialsData = [
+//   {
+//     image: "assets/img/test1.jpg",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi ipsum iste consectetur earum rerum voluptas dolor, quos magnam sunt.",
+//     name: "J.R.R. Tolkien",
+//     title: "CEO",
+//   },
+//   {
+//     image: "assets/img/test2.jpg",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi ipsum iste consectetur earum rerum voluptas dolor, quos magnam sunt.",
+//     name: "Legolas Greenleaf",
+//     title: "Manager",
+//   },
+//   {
+//     image: "assets/img/test3.jpg",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi ipsum iste consectetur earum rerum voluptas dolor, quos magnam sunt.",
+//     name: "Ronnie James Dio",
+//     title: "Founder of DIO",
+//   },
+//   {
+//     image: "assets/img/test4.jpg",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi ipsum iste consectetur earum rerum voluptas dolor, quos magnam sunt.",
+//     name: "Tony Iommi",
+//     title: "lead guitarist of Black Sabbath",
+//   },
+// ];
