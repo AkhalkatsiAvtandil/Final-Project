@@ -124,7 +124,14 @@ img.displaySlide {
   display: flex;
   justify-content: space-between;
 }
-.testamonials {
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mytestamonials {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,12 +143,12 @@ img.displaySlide {
   flex-direction: column;
   align-items: center;
 }
-.testamonial img {
+.testimonial img {
   max-width: 235px;
   min-height: 235px;
   border-radius: 50%;
 }
-.testamonial {
+.testimonial {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,19 +156,23 @@ img.displaySlide {
   height: 344px;
   background-color: rgba(248, 248, 248, 1);
   border: 2px solid black;
+  display: none;
+}
+.testimonial.active {
+  display: flex;
 }
 .impression {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-.bullets {
+.pagination {
   display: flex;
   justify-content: center;
   row-gap: 9px;
   border-radius: 8px;
 }
-.bullet {
+.dot {
   margin-top: 87px;
   width: 57px;
   height: 16px;
@@ -170,6 +181,6 @@ img.displaySlide {
   transition: background 0.5s ease;
   border: 2px solid black;
 }
-.bullet.active {
+.dot.active {
   background: rgba(253, 111, 0, 1);
 }

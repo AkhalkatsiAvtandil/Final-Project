@@ -176,3 +176,85 @@ filterButtons.forEach((button) => {
 //     title: "lead guitarist of Black Sabbath",
 //   },
 // ];
+
+// function slider() {
+//   const testimonials = document.querySelectorAll(".testimonial");
+//   const dots = document.querySelectorAll(".dot");
+//   // alltestimonial = document.querySelector(".testimonials");
+
+//   let currentindex = 1;
+
+//   function updateSlides() {
+//     testimonials.forEach((testimonial, index) => {
+//       if (index === currentindex) {
+//         testimonial.classList.add("active");
+//       } else {
+//         testimonial.classList.remove("active");
+//       }
+//     });
+//     dots.forEach((dot, index) => {
+//       if (index === currentIndex) {
+//         dot.classList.add("active");
+//       } else {
+//         dot.classList.remove("active");
+//       }
+//     });
+//   }
+//   // const dots = document.querySelectorAll(".dot");
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       currentindex = index;
+//       updateSlides();
+//     });
+//   });
+//   updateSlides();
+// }
+// slider();
+
+function slider() {
+  const testimonials = document.querySelectorAll(".testimonial");
+  const dots = document.querySelectorAll(".dot");
+  let currentindex = 0;
+
+  function updateSlides() {
+    testimonials.forEach((testimonial, index) => {
+      if (index === currentindex) {
+        testimonial.classList.add("active");
+      } else {
+        testimonial.classList.remove("active");
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      if (index === currentindex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentindex = index;
+      updateSlides();
+    });
+  });
+
+  updateSlides();
+}
+
+slider();
+
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    dots.forEach((d) => d.classList.remove("active"));
+    testimonials.forEach((t) => t.classList.remove("active"));
+
+    dot.classList.add("active");
+    testimonials[index].classList.add("active");
+  });
+});
