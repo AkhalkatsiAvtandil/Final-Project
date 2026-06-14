@@ -258,3 +258,36 @@ dots.forEach((dot, index) => {
     testimonials[index].classList.add("active");
   });
 });
+
+// Contact Us
+const form = document.getElementById("contactForm");
+const modal = document.getElementById("successModal");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // Stop page refresh
+
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    website: document.getElementById("website").value,
+    message: document.getElementById("message").value,
+  };
+
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+
+    if (response.ok) {
+      // Show the success message
+      modal.style.display = "block";
+      form.reset(); // Optional: clear form after success
+    }
+  } catch (error) {
+    console.error("Error sending data:", error);
+  }
+});

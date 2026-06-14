@@ -184,3 +184,68 @@ img.displaySlide {
 .dot.active {
   background: rgba(253, 111, 0, 1);
 }
+
+.inputgroup {
+  display: flex;
+  column-gap: 28px;
+  align-items: center;
+  justify-content: center;
+}
+#contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 41px;
+}
+.contactus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactustitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textareastyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#message {
+  width: 992px;
+  height: 116px;
+  border-radius: 14px;
+}
+#name,
+#email,
+#website {
+  width: 312px;
+  height: 76px;
+  border-radius: 14px;
+}
+.submitbtn {
+  margin-top: 32px;
+  width: 312px;
+  height: 76px;
+  background-color: rgba(253, 111, 0, 1);
+  border-radius: 14px;
+  border-style: none;
+}
+#successModal {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center; */
+  margin-top: 15px;
+  /* height: 37px; */
+  font-family: archvio;
+  background-color: rgba(253, 111, 0, 1);
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 7px;
+}
