@@ -233,6 +233,7 @@ img.displaySlide {
   background-color: rgba(253, 111, 0, 1);
   border-radius: 14px;
   border-style: none;
+  margin-bottom: 54px;
 }
 #successModal {
   /* display: flex;
@@ -248,4 +249,30 @@ img.displaySlide {
   font-weight: 700;
   font-size: 20px;
   border-radius: 7px;
+}
+footer {
+  margin-top: 130px;
+  margin-bottom: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer nav {
+  display: flex;
+  column-gap: 26px;
+}
+.footerimg {
+  margin-top: 80px;
+  margin-bottom: 62px;
+  /* width: 32px;
+  height: 32px; */
+  background-color: rgba(30, 30, 30, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerimg img {
+  width: 32px;
+  height: 32px;
 }

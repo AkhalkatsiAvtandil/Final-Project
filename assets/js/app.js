@@ -264,7 +264,7 @@ const form = document.getElementById("contactForm");
 const modal = document.getElementById("successModal");
 
 form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // Stop page refresh
+  e.preventDefault();
 
   const formData = {
     name: document.getElementById("name").value,
@@ -283,9 +283,8 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      // Show the success message
       modal.style.display = "block";
-      form.reset(); // Optional: clear form after success
+      form.reset();
     }
   } catch (error) {
     console.error("Error sending data:", error);
