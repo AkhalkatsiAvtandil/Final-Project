@@ -38,15 +38,15 @@ function nextSlide() {
 
 // About Me
 
-const timemanagment = document.getElementById("timemanagment");
-// let value = document.getElementById("timemanagment").value;
+// const timemanagment = document.getElementById("timemanagment");
+// // let value = document.getElementById("timemanagment").value;
 
-// timemanagment.addEventListener("scroll", (event) => {
-//   event.target.value = 0;
-// });
-// timemanagment.addEventListener("scroll", (event) => {
-//   event.target.value = 0.98;
-// });
+// // timemanagment.addEventListener("scroll", (event) => {
+// //   event.target.value = 0;
+// // });
+// // timemanagment.addEventListener("scroll", (event) => {
+// //   event.target.value = 0.98;
+// // });
 window.addEventListener("scroll", (e) => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const docHeight =

@@ -28,17 +28,21 @@
     <main class="container">
       <section class="home">
         <div class="introducing">
-          <p>HI I am</p>
-          <p>Avtandil Akhalkatsi</p>
-          <p>Junior Font-end</p>
-          <p>Developer</p>
+          <div class="introleft">
+            <p class="hi">HI I am</p>
+            <p class="namesurename">Avtandil Akhalkatsi</p>
+            <p class="strongleftp">Junior Font-end</p>
+          </div>
+          <div class="introright">
+            <p>Developer</p>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam in
             molestias ducimus! Esse culpa et officiis quisquam deleniti ducimus
             doloremque dicta facere expedita tenetur ipsam qui dolor, ut
             distinctio voluptate?
           </p>
-          <button>Hire Me</button>
+          <button class="hiremebtn">Hire Me</button>
         </div>
         <div class="imgandsocial">
           <div class="slider">
@@ -58,28 +62,59 @@
         </div>
       </section>
       <section class="aboutme">
-        <!-- <img src="assets/img/test1.jpg" alt="me" /> -->
-        <div>
-          <h2>About Me</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            saepe quibusdam veniam repellendus error? Non praesentium aut
-            nostrum enim aliquid culpa, dignissimos voluptates nisi nulla in
-            vero modi, debitis optio.
-          </p>
+        <img src="assets/img/test1.jpg" alt="me" />
+        <div class="progbarintro">
+          <div class="aboutmeintro">
+            <h2>About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              saepe quibusdam veniam repellendus error? Non praesentium aut
+              nostrum enim aliquid culpa, dignissimos voluptates nisi nulla in
+              vero modi, debitis optio.
+            </p>
+          </div>
           <form action="#">
             <div class="progressbars">
-              <img src="assets/img/test1.jpg" alt="" />
+              <!-- <img src="assets/img/test1.jpg" alt="" /> -->
               <!-- <label for="timemanagment">Time Managment</label>
               <progress id="timemanagment" value="0" max="1"></progress> -->
               <label for="html">HTML</label>
-              <progress id="html" value="0" max="1"></progress>
+              <input
+                type="range"
+                id="html"
+                max="1"
+                value="0.95"
+                data-target="0.85"
+                disabled
+              />
               <label for="css">CSS</label>
-              <progress id="css" value="0" max="1"></progress>
+              <input
+                type="range"
+                id="css"
+                max="1"
+                value="0.83"
+                data-target="0.82"
+                disabled
+              />
               <label for="js">Java Script</label>
-              <progress id="js" value="0" max=""></progress>
+              <input
+                type="range"
+                id="js"
+                min=""
+                max="0.72"
+                value="0.73"
+                data-target="0.71"
+                disabled
+              />
               <label for="timemanagment">Time Managment</label>
-              <progress id="timemanagment" value="0" max="1"></progress>
+              <input
+                type="range"
+                id="timemanagment"
+                max="1"
+                value="0.96"
+                data-target="0.95"
+                disabled
+              />
             </div>
           </form>
           <!-- <img src="assets/img/test1.jpg" alt="" /> -->
