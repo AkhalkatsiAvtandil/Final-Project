@@ -126,7 +126,7 @@ img.displaySlide {
   font-size: 70px;
 }
 .hiremebtn {
-  max-width: 188px;
+  width: 188px;
   height: 52px;
   border-radius: 5px;
   border: none;
@@ -138,12 +138,20 @@ img.displaySlide {
   justify-content: center;
   align-items: center;
   column-gap: 32px;
+  margin-top: 70px;
+}
+h2 {
+  font-family: archvio;
+  font-weight: 600;
+  font-size: 65px;
 }
 .aboutmeintro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .progbarintro {
   display: flex;
@@ -159,7 +167,10 @@ input {
   height: 12px;
   border-radius: 6px;
 }
-
+.progressbars input {
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
 .progressbars input[type="range"]::after {
   color: #ff6600;
   background-color: #ff6600;
@@ -189,7 +200,7 @@ input {
 
 .progressbars input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* appearance: none; */
+  appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -197,17 +208,23 @@ input {
   border: 3px solid #ff6600;
   cursor: pointer;
 }
-
+.Services {
+  margin-top: 139px;
+  margin-bottom: 139px;
+}
 .servicedescription {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  row-gap: 30px;
+  margin-bottom: 50px;
 }
 .graphiccards {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+  row-gap: 31px;
 }
 .graphiccards img {
   max-width: 330px;
@@ -220,13 +237,14 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  row-gap: 22px;
 }
 .buttonflex {
   display: flex;
   justify-content: center;
   column-gap: 22px;
   margin-top: 59px;
-  margin-bottom: 108px;
+  margin-bottom: 106px;
 }
 .protfolio-container img {
   max-width: 445px;
@@ -234,7 +252,8 @@ input {
 }
 .protfolio-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 44px;
 }
 .testimonials {
   display: flex;
@@ -248,6 +267,21 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 139px;
+}
+.introducing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 30px;
+  margin-bottom: 72px;
+}
+.introducing h3 {
+  font-family: archvio;
+  font-size: 65px;
+  font-weight: 600;
 }
 
 .testimonial img {
@@ -267,17 +301,28 @@ input {
 }
 .testimonial.active {
   display: flex;
+  column-gap: 11px;
+
+  align-items: center;
+  align-content: center;
+  padding-left: 48px;
+  padding-right: 48px;
 }
+#testimonial-text {
+  max-width: 658px;
+}
+
 .impression {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  row-gap: 17px;
 }
 .pagination {
   display: flex;
   justify-content: center;
-  row-gap: 9px;
-  border-radius: 8px;
+  column-gap: 9px;
+  margin-bottom: 90px;
 }
 .dot {
   margin-top: 87px;
@@ -287,6 +332,7 @@ input {
   cursor: pointer;
   transition: background 0.5s ease;
   border: 2px solid black;
+  border-radius: 8px;
 }
 .dot.active {
   background: rgba(253, 111, 0, 1);
@@ -315,6 +361,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 30px;
+  margin-bottom: 50px;
 }
 .textareastyle {
   display: flex;
