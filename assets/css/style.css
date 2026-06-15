@@ -182,7 +182,7 @@ input {
   border-radius: 3px;
   background: #e0e0e0;
 }
-#html {
+/* #html {
   background: linear-gradient(to right, #ff6600 85%, #e0e0e0 85%);
 }
 
@@ -196,8 +196,82 @@ input {
 
 #timemanagment {
   background: linear-gradient(to right, #ff6600 95%, #e0e0e0 95%);
+} */
+@layer demo {
+  @supports (timeline-scope: --foo) {
+    input[type="range"] {
+      appearance: none;
+      background: none;
+      inline-size: 75vw;
+
+      animation: --range-observer linear reverse;
+
+      animation-timeline: --range-thumb;
+
+      timeline-scope: --range-thumb;
+
+      &::-webkit-slider-thumb {
+        view-timeline: --range-thumb inline;
+      }
+
+      &::-webkit-slider-runnable-track {
+        overflow-x: auto;
+
+        background: linear-gradient(
+          to right in oklab,
+          rgba(253, 111, 0, 1),
+          rgba(253, 111, 0, 1) var(--range-value, 50%),
+          oklch(from oklch(99.557% 0.0021 14.222 / 0) calc(l * 0.5) c h) 0
+        );
+      }
+    }
+  }
+
+  @property --range-value {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+  }
+
+  @keyframes --range-observer {
+    to {
+      --range-value: 100%;
+    }
+  }
+
+  input[type="range"] {
+    --size: 24px;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      cursor: pointer;
+      width: var(--size);
+      height: var(--size);
+      /* border-radius: 1e3px; */
+      background-color: white;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-size: 100% calc(var(--size) / 3);
+      background-position-y: calc(var(--size) / 4);
+      background-repeat: no-repeat;
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 1e3px;
+      background-color: rgba(253, 111, 0, 1);
+    }
+  }
 }
 
+@supports (timeline-scope: --foo) {
+  body::after {
+    content: "Using Scroll-driven animations";
+  }
+}
 .progressbars input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;

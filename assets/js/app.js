@@ -93,6 +93,7 @@ function nextSlide() {
 //   const progressValue = scrollFraction * 0.71;
 //   js.value = progressValue;
 // });
+
 document.addEventListener("DOMContentLoaded", () => {
   const progressSection = document.querySelector(".progressbars");
   const skillRanges = document.querySelectorAll(
