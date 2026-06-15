@@ -137,6 +137,7 @@ img.displaySlide {
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 32px;
 }
 .aboutmeintro {
   display: flex;
@@ -154,10 +155,49 @@ img.displaySlide {
   flex-direction: column;
 }
 input {
-  width: 721px;
+  width: 657px;
   height: 12px;
   border-radius: 6px;
 }
+
+.progressbars input[type="range"]::after {
+  color: #ff6600;
+  background-color: #ff6600;
+  background: rgba(248, 248, 248, 1);
+}
+.progressbars input[type="range"] {
+  appearance: none;
+  height: 12px;
+  border-radius: 3px;
+  background: #e0e0e0;
+}
+#html {
+  background: linear-gradient(to right, #ff6600 85%, #e0e0e0 85%);
+}
+
+#css {
+  background: linear-gradient(to right, #ff6600 82%, #e0e0e0 82%);
+}
+
+#js {
+  background: linear-gradient(to right, #ff6600 71%, #e0e0e0 71%);
+}
+
+#timemanagment {
+  background: linear-gradient(to right, #ff6600 95%, #e0e0e0 95%);
+}
+
+.progressbars input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* appearance: none; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #ff6600;
+  cursor: pointer;
+}
+
 .servicedescription {
   display: flex;
   justify-content: center;
@@ -346,6 +386,6 @@ footer nav {
 
 /* 1511515? */
 
-.progressbars input[type="range"] {
+/* .progressbars input[type="range"] {
   pointer-events: none;
-}
+} */
