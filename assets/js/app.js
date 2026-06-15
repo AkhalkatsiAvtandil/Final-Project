@@ -47,53 +47,85 @@ function nextSlide() {
 // // timemanagment.addEventListener("scroll", (event) => {
 // //   event.target.value = 0.98;
 // // });
-window.addEventListener("scroll", (e) => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const docHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  // timemanagment.value = "0.07";
-  // behavior: "smooth";
-  const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.95;
-  timemanagment.value = progressValue;
-  behavior: "smooth";
+// window.addEventListener("scroll", (e) => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   const docHeight =
+//     document.documentElement.scrollHeight -
+//     document.documentElement.clientHeight;
+//   // timemanagment.value = "0.07";
+//   // behavior: "smooth";
+//   const scrollFraction = scrollTop / docHeight;
+//   const progressValue = scrollFraction * 0.95;
+//   timemanagment.value = progressValue;
+//   behavior: "smooth";
+// });
+
+// const html = document.getElementById("html");
+// window.addEventListener("scroll", (e) => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   const docHeight =
+//     document.documentElement.scrollHeight -
+//     document.documentElement.clientHeight;
+//   const scrollFraction = scrollTop / docHeight;
+//   const progressValue = scrollFraction * 0.9;
+//   html.value = progressValue;
+// });
+
+// const css = document.getElementById("css");
+// window.addEventListener("scroll", (e) => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   const docHeight =
+//     document.documentElement.scrollHeight -
+//     document.documentElement.clientHeight;
+//   const scrollFraction = scrollTop / docHeight;
+//   const progressValue = scrollFraction * 0.87;
+//   css.value = progressValue;
+// });
+
+// const js = document.getElementById("js");
+// window.addEventListener("scroll", (e) => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   const docHeight =
+//     document.documentElement.scrollHeight -
+//     document.documentElement.clientHeight;
+
+//   const scrollFraction = scrollTop / docHeight;
+//   const progressValue = scrollFraction * 0.71;
+//   js.value = progressValue;
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const progressSection = document.querySelector(".progressbars");
+  const skillRanges = document.querySelectorAll(
+    '.progressbars input[type="range"]',
+  );
+
+  if (!progressSection) return;
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    const rect = progressSection.getBoundingClientRect();
+    const sectionTopOffset = rect.top + scrollTop;
+
+    const startActivation = sectionTopOffset - windowHeight;
+
+    const animationDistance = 600;
+    let scrollProgress = (scrollTop - startActivation) / animationDistance;
+
+    scrollProgress = Math.max(0, scrollProgress);
+
+    skillRanges.forEach((range) => {
+      const maxTarget = parseFloat(range.getAttribute("data-target"));
+
+      if (maxTarget) {
+        const calculatedValue = scrollProgress * maxTarget;
+
+        range.value = Math.min(calculatedValue, maxTarget);
+      }
+    });
+  });
 });
-
-const html = document.getElementById("html");
-window.addEventListener("scroll", (e) => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const docHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.9;
-  html.value = progressValue;
-});
-
-const css = document.getElementById("css");
-window.addEventListener("scroll", (e) => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const docHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.87;
-  css.value = progressValue;
-});
-
-const js = document.getElementById("js");
-window.addEventListener("scroll", (e) => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const docHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  const scrollFraction = scrollTop / docHeight;
-  const progressValue = scrollFraction * 0.71;
-  js.value = progressValue;
-});
-
 // My Projects
 
 const allBtn = document.getElementById("allbtn");

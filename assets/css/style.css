@@ -343,3 +343,9 @@ footer nav {
   width: 32px;
   height: 32px;
 }
+
+/* 1511515? */
+
+.progressbars input[type="range"] {
+  pointer-events: none;
+}
