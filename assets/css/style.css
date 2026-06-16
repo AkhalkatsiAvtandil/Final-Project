@@ -31,6 +31,11 @@ ul {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 a {
   text-decoration: none;
@@ -57,6 +62,9 @@ header div {
   display: flex;
   justify-content: space-between;
 }
+.socialiconsnone {
+  display: none;
+}
 .socialicons {
   margin-top: 36px;
   display: flex;
@@ -71,8 +79,8 @@ header div {
   overflow: hidden;
 }
 .slides img {
-  max-width: 100%s;
-
+  max-width: 100%;
+  border-radius: 20px;
   height: 617px;
   display: none;
 }
@@ -104,6 +112,7 @@ img.displaySlide {
 
 .introducingg {
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
   flex-direction: column;
   font-family: archvio;
@@ -155,6 +164,7 @@ img.displaySlide {
   align-items: center;
   column-gap: 32px;
   margin-top: 70px;
+  flex-wrap: wrap;
 }
 .aboutme img {
   /* width: 100%; */
@@ -176,6 +186,8 @@ h2 {
 }
 label {
   color: rgba(255, 255, 255, 1);
+  font-family: archvio;
+  font-weight: 600;
 }
 .introtext {
   color: rgba(255, 255, 255, 1);
@@ -204,6 +216,7 @@ input {
 .progressbars input {
   margin-top: 18px;
   margin-bottom: 25px;
+  pointer-events: none;
 }
 .progressbars input[type="range"]::after {
   color: #ff6600;
@@ -336,6 +349,7 @@ input {
 }
 .graphiccards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 24px;
   row-gap: 31px;
@@ -407,11 +421,13 @@ input {
 }
 .protfolio-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 44px;
 }
 .testimonials {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -456,6 +472,7 @@ input {
 }
 .testimonial.active {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 11px;
 
   align-items: center;
@@ -496,6 +513,7 @@ input {
 
 .inputgroup {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 28px;
   align-items: center;
   justify-content: center;
@@ -509,6 +527,7 @@ input {
 }
 .contactus {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -595,3 +614,85 @@ footer nav {
 /* .progressbars input[type="range"] {
   pointer-events: none;
 } */
+@media (375px >= width), (980px >= width) {
+  .container {
+    max-width: 344px;
+    margin: 0 auto;
+    padding: 4px;
+  }
+  .slides img {
+    max-width: 365px;
+    height: 450px;
+    margin-bottom: 40px;
+  }
+  .Services {
+    margin: 0, auto;
+  }
+  .servicetext {
+    max-width: 347px;
+  }
+  .testimonial.active {
+    max-width: 347px;
+    height: 500px;
+  }
+  .testimonial {
+    max-width: 347px;
+    height: 500px;
+  }
+  .aboutme img {
+    display: none;
+  }
+  .card img {
+    /* width: 100%; */
+    max-width: 347px;
+  }
+  .aboutmeintro h2 {
+    margin-bottom: 40px;
+  }
+  .introducing h3,
+  h2 {
+    display: flex;
+    align-self: flex-start;
+    font-family: archvio;
+    font-size: 54px;
+    font-weight: 300;
+  }
+  .progressbars input {
+    width: 347px;
+  }
+  #ceo-img {
+    max-width: 125px;
+    max-height: 125px;
+  }
+  .textareastyle,
+  #message {
+    width: 312px;
+  }
+  .inputgroup {
+    row-gap: 27px;
+  }
+  .navdiv {
+    display: none;
+  }
+  ul {
+    margin-top: 61px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  .socialiconsnone {
+    margin-top: 36px;
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+  }
+  .socialicons {
+    display: none;
+  }
+  .introtext,
+  .hiremebtn {
+    display: none;
+  }
+}
