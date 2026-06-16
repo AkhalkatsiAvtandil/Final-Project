@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const startActivation = sectionTopOffset - windowHeight;
 
-    const animationDistance = 600;
+    const animationDistance = 500;
     let scrollProgress = (scrollTop - startActivation) / animationDistance;
 
     scrollProgress = Math.max(0, scrollProgress);
