@@ -633,11 +633,11 @@ footer nav {
   }
   .testimonial.active {
     max-width: 347px;
-    height: 500px;
+    height: 600px;
   }
   .testimonial {
     max-width: 347px;
-    height: 500px;
+    height: 600px;
   }
   .aboutme img {
     display: none;
