@@ -11,9 +11,9 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
+body {
   background-color: rgba(30, 30, 30, 1);
-} */
+}
 .container {
   max-width: 1420px;
   margin: 0 auto;
@@ -32,6 +32,7 @@ nav {
 a {
   text-decoration: none;
   font-family: archvio;
+  color: rgba(255, 255, 255, 1);
 }
 header {
   margin-top: 67px;
@@ -90,12 +91,13 @@ img.displaySlide {
   align-items: center;
   margin-top: 120px;
 }
-.introducing {
+
+.introducingg {
   display: flex;
   justify-content: left;
   flex-direction: column;
   font-family: archvio;
-  max-width: 718px;
+  max-width: 698px;
 }
 .introleft {
   display: flex;
@@ -107,10 +109,12 @@ img.displaySlide {
 .strongleftp {
   font-weight: 700;
   font-size: 70px;
+  color: rgba(255, 255, 255, 1);
 }
 .hi {
   font-size: 24px;
   font-weight: 600;
+  color: rgba(255, 255, 255, 1);
 }
 .namesurename {
   font-weight: 600;
@@ -124,6 +128,7 @@ img.displaySlide {
   font-family: archvio;
   font-weight: 700;
   font-size: 70px;
+  color: rgba(255, 255, 255, 1);
 }
 .hiremebtn {
   width: 188px;
@@ -152,6 +157,13 @@ h2 {
   align-items: flex-start;
   margin-top: 15px;
   margin-bottom: 15px;
+  color: rgba(255, 255, 255, 1);
+}
+label {
+  color: rgba(255, 255, 255, 1);
+}
+.introtext {
+  color: rgba(255, 255, 255, 1);
 }
 .progbarintro {
   display: flex;
@@ -285,6 +297,12 @@ input {
 .Services {
   margin-top: 139px;
   margin-bottom: 139px;
+  color: rgba(255, 255, 255, 1);
+}
+.servicetext {
+  max-width: 933px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
 }
 .servicedescription {
   display: flex;
@@ -312,6 +330,17 @@ input {
   flex-direction: column;
   align-items: center;
   row-gap: 22px;
+  color: rgba(255, 255, 255, 1);
+}
+.card h3 {
+  color: rgba(253, 111, 0, 1);
+  height: 29px;
+  font-weight: 400;
+}
+.card p {
+  color: rgba(255, 255, 255, 1);
+  height: 36px;
+  font-weight: 700;
 }
 .buttonflex {
   display: flex;
@@ -319,6 +348,36 @@ input {
   column-gap: 22px;
   margin-top: 59px;
   margin-bottom: 106px;
+}
+#allbtn {
+  height: 56px;
+  width: 76px;
+  border-radius: 12px;
+  border: none;
+}
+#htmlbtn {
+  height: 56px;
+  width: 76px;
+  border-radius: 12px;
+  border: none;
+}
+#cssbtn {
+  height: 56px;
+  width: 76px;
+  border-radius: 12px;
+  border: none;
+}
+#jsbtn {
+  height: 56px;
+  width: 76px;
+  border-radius: 12px;
+  border: none;
+}
+
+.filter-btn.active {
+  background-color: rgba(253, 111, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(253, 111, 0, 1);
 }
 .protfolio-container img {
   max-width: 445px;
@@ -347,17 +406,17 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   row-gap: 30px;
   margin-bottom: 72px;
+  color: rgba(255, 255, 255, 1);
 }
 .introducing h3 {
   font-family: archvio;
   font-size: 65px;
   font-weight: 600;
 }
-
 .testimonial img {
   max-width: 235px;
   min-height: 235px;
@@ -437,6 +496,7 @@ input {
   align-items: center;
   row-gap: 30px;
   margin-bottom: 50px;
+  color: rgba(255, 255, 255, 1);
 }
 .textareastyle {
   display: flex;
