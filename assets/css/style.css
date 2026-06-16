@@ -45,6 +45,17 @@ a {
   font-family: archvio;
   color: rgba(255, 255, 255, 1);
 }
+a:hover {
+  color: rgb(255, 0, 55);
+  font-size: 17px;
+  transition: color 0.6s ease;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 0, 55);
+  font-size: 17px;
+  transition: color 0.6s ease;
+}
 header {
   margin-top: 67px;
   display: flex;
@@ -53,7 +64,8 @@ header {
 }
 .downloadbtn {
   margin-left: 24px;
-
+  font-family: archvio;
+  font-size: 14px;
   background-color: rgba(253, 111, 0, 1);
   width: 188px;
   height: 52px;
@@ -170,7 +182,6 @@ img.displaySlide {
   flex-wrap: wrap;
 }
 .aboutme img {
-  /* width: 100%; */
   max-height: 690px;
 }
 h2 {
@@ -232,21 +243,7 @@ input {
   border-radius: 3px;
   background: #e0e0e0;
 }
-/* #html {
-  background: linear-gradient(to right, #ff6600 85%, #e0e0e0 85%);
-}
 
-#css {
-  background: linear-gradient(to right, #ff6600 82%, #e0e0e0 82%);
-}
-
-#js {
-  background: linear-gradient(to right, #ff6600 71%, #e0e0e0 71%);
-}
-
-#timemanagment {
-  background: linear-gradient(to right, #ff6600 95%, #e0e0e0 95%);
-} */
 @layer demo {
   @supports (timeline-scope: --foo) {
     input[type="range"] {
@@ -393,30 +390,45 @@ input {
   width: 76px;
   border-radius: 12px;
   border: none;
+  font-size: 14px;
+  font-family: archvio;
+  font-weight: 600;
 }
 #htmlbtn {
   height: 56px;
   width: 76px;
   border-radius: 12px;
   border: none;
+  font-size: 14px;
+  font-family: archvio;
+  font-weight: 600;
 }
 #cssbtn {
   height: 56px;
   width: 76px;
   border-radius: 12px;
   border: none;
+  font-size: 14px;
+  font-family: archvio;
+  font-weight: 600;
 }
 #jsbtn {
   height: 56px;
   width: 76px;
   border-radius: 12px;
   border: none;
+  font-size: 14px;
+  font-family: archvio;
+  font-weight: 600;
 }
 
 .filter-btn.active {
   background-color: rgba(253, 111, 0, 1);
   color: rgba(255, 255, 255, 1);
   border-color: rgba(253, 111, 0, 1);
+  font-size: 14px;
+  font-family: archvio;
+  font-weight: 600;
 }
 .protfolio-container img {
   max-width: 445px;
@@ -447,7 +459,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+
   text-align: center;
   row-gap: 30px;
   margin-bottom: 72px;
@@ -583,12 +595,8 @@ textarea::-webkit-input-placeholder {
   cursor: pointer;
 }
 #successModal {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center; */
   margin-top: 15px;
-  /* height: 37px; */
+
   font-family: archvio;
   background-color: rgba(253, 111, 0, 1);
   color: black;
@@ -612,8 +620,7 @@ footer nav {
 .footerimg {
   margin-top: 80px;
   margin-bottom: 62px;
-  /* width: 32px;
-  height: 32px; */
+
   background-color: rgba(30, 30, 30, 1);
   display: flex;
   align-items: center;
@@ -624,11 +631,6 @@ footer nav {
   height: 32px;
 }
 
-/* 1511515? */
-
-/* .progressbars input[type="range"] {
-  pointer-events: none;
-} */
 @media (375px >= width), (980px >= width) {
   .container {
     max-width: 344px;
@@ -636,9 +638,6 @@ footer nav {
     padding: 0px;
   }
 
-  /* body {
-    overflow-x: hidden;
-  } */
   #successModal {
     max-width: 344px;
   }
@@ -663,6 +662,12 @@ footer nav {
   }
   .aboutme img {
     display: none;
+  }
+  #allprojects {
+    row-gap: 40px;
+  }
+  .impression {
+    flex-direction: column-reverse;
   }
   .card img {
     /* width: 100%; */
@@ -721,7 +726,7 @@ footer nav {
     display: block;
     z-index: 1000;
   }
-  /* 1. Completely hide the actual checkbox square */
+
   .menu-checkbox {
     display: none;
   }
@@ -781,5 +786,20 @@ footer nav {
 
   .menu-checkbox:checked ~ .menu-toggle .line:nth-child(2) {
     transform: translateY(-7px) rotate(-45deg);
+  }
+  .sandwichbtn {
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(253, 111, 0, 1);
+    margin-bottom: 10px;
+    font-family: archvio;
+    font-weight: 600;
+    font-size: 14px;
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(255, 0, 55);
+      font-size: 16px;
+      transition: color 0.6s ease;
+    }
   }
 }
