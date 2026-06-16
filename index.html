@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="FINAL PROJECT" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Avtandil Akhalkatsi" />
+    <meta
+      property="og:url"
+      content="https://akhalkatsiavtandil.github.io/Final-Project/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Junior Front-end Developer" />
+    <meta
+      property="og:description"
+      content="My final project about Front-end"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/AkhalkatsiAvtandil/Final-Project/refs/heads/main/assets/img/meinreallife.jpg"
+    />
+
     <title>Final Project</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/app.js" defer></script>
@@ -22,11 +41,14 @@
             <li><a href="#aboutme" target="_self">About Me</a></li>
             <li><a href="#servicecs" target="_self">Services</a></li>
             <li><a href="#myporjects" target="_self">Projects</a></li>
-            <li><a href="#testimonialsss" target="_self">Testimonials</a></li>
+            <li><a href="#mytestamonials" target="_self">Testimonials</a></li>
             <li><a href="#contactus" target="_self">Contact</a></li>
           </ul>
         </nav>
-        <button class="downloadbtn">Download CV</button>
+        <a href="#" target="_blank" download="custom-filename.pdf"
+          ><button class="downloadbtn">Download CV</button></a
+        >
+        <!-- <button class="downloadbtn">Download CV</button> -->
       </div>
     </header>
     <main class="container">
@@ -164,29 +186,48 @@
         </div>
         <div class="protfolio-container" id="allprojects">
           <div class="card" id="htmlproject" data-category="html">
-            <img
+            <a
+              href="https://akhalkatsiavtandil.github.io/MidtermExam/"
+              target="_blank"
+              ><img
+                src="assets/img/projecthtml.png"
+                alt="html srtucture content"
+            /></a>
+            <!-- <img
               src="assets/img/projecthtml.png"
               alt="html srtucture content"
-            />
+            /> -->
             <h3 class="webstructure">Web Structure</h3>
             <p>html srtucture content</p>
           </div>
           <div class="card" id="cssproject" data-category="css">
-            <img src="assets/img/projectscss.png" alt="css components" />
+            <a
+              href="https://akhalkatsiavtandil.github.io/TASK11/"
+              target="_blank"
+              ><img src="assets/img/projectscss.png" alt="css components"
+            /></a>
+            <!-- <img src="assets/img/projectscss.png" alt="css components" /> -->
             <h3>Web Designe</h3>
             <p>css components</p>
           </div>
           <div class="card" id="jsproject" data-category="javascript">
-            <img
+            <a
+              href="https://akhalkatsiavtandil.github.io/Task19/"
+              target="_blank"
+              ><img
+                src="assets/img/projectjs.png"
+                alt="java script manipulation"
+            /></a>
+            <!-- <img
               src="assets/img/projectjs.png"
               alt="java script manipulation"
-            />
+            /> -->
             <h3>Web Manipulations</h3>
             <p>java script manipulation</p>
           </div>
         </div>
       </section>
-      <section class="mytestamonials">
+      <section class="mytestamonials" id="mytestamonials">
         <div class="introducing">
           <h3>Testamonials</h3>
           <p>
@@ -337,7 +378,7 @@
           <li><a href="#aboutme" target="_self">About Me</a></li>
           <li><a href="#servicecs" target="_self">Services</a></li>
           <li><a href="#myporjects" target="_self">Projects</a></li>
-          <li><a href="#testimonialsss" target="_self">Testimonials</a></li>
+          <li><a href="#mytestamonials" target="_self">Testimonials</a></li>
           <li><a href="#contactus" target="_self">Contact</a></li>
         </ul>
       </nav>
