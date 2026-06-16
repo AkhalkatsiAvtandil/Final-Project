@@ -33,6 +33,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
+.sandwich {
+  display: none;
+}
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -518,6 +521,18 @@ input {
   align-items: center;
   justify-content: center;
 }
+.inputgroup input::-webkit-input-placeholder {
+  color: green;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+}
+textarea::-webkit-input-placeholder {
+  color: green;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+}
 #contactForm {
   display: flex;
   justify-content: center;
@@ -618,7 +633,14 @@ footer nav {
   .container {
     max-width: 344px;
     margin: 0 auto;
-    padding: 4px;
+    padding: 0px;
+  }
+
+  /* body {
+    overflow-x: hidden;
+  } */
+  #successModal {
+    max-width: 344px;
   }
   .slides img {
     max-width: 365px;
@@ -694,5 +716,70 @@ footer nav {
   .introtext,
   .hiremebtn {
     display: none;
+  }
+  .sandwich {
+    display: block;
+    z-index: 1000;
+  }
+  /* 1. Completely hide the actual checkbox square */
+  .menu-checkbox {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+  }
+
+  .menu-toggle .line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(253, 0, 0);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100px;
+    height: 500px;
+    background-color: rgba(253, 111, 0, 1);
+    padding-top: 10px;
+    transition: right 0.3s ease;
+    border-radius: 10px;
+  }
+  header a {
+    margin-top: 15px;
+  }
+  .line {
+    display: block;
+  }
+  .menu-toggle {
+    display: flex;
+    top: 4px;
+    margin-top: 10px;
+    right: 5px;
+    position: fixed;
+    z-index: 1001;
+  }
+  .menu-checkbox:checked ~ .nav-menu {
+    right: 0;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle .line:nth-child(2) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
